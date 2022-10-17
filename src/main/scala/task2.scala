@@ -80,7 +80,7 @@ object runtask2:
       })
 
 
-  @main def main2(inputPath: String,interPath: String, outputPath: String) =
+  def main(inputPath: String,interPath: String, outputPath: String) =
     val conf: JobConf = new JobConf(this.getClass)
     conf.setJobName("First Stage")
     conf.set("mapred.textoutputformat.separator", ",")
