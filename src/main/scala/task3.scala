@@ -44,7 +44,7 @@ object runtask3:
       val sum = values.asScala.reduce((valueOne, valueTwo) => new IntWritable(valueOne.get() + valueTwo.get()))
       output.collect(key,  new IntWritable(sum.get()))
 
-  @main def main3(inputPath: String, outputPath: String) =
+  def main(inputPath: String, outputPath: String) =
     val conf: JobConf = new JobConf(this.getClass)
     conf.setJobName("Task3")
     conf.set("mapreduce.output.textoutputformat.separator", ",")
