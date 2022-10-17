@@ -1,6 +1,9 @@
 class task4 {
 
 }
+/**
+ * This task involves counting the number of characters in the longest message of each log type which matches the pattern given.
+ */
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.conf.*
 import org.apache.hadoop.io.*
