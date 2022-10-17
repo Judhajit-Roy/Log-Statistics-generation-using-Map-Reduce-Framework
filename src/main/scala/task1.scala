@@ -1,7 +1,12 @@
 class task1 {
 
 }
-# Task to read inputs and count instances for interval
+/**
+ * This map reduce job takes in log files in a folder as input and outputs the number of messages of each log type
+ * (INFO, DEBUG, WARN, ERROR) divided across time intervals of n seconds where n is passed as a parameter while
+ * running the program.
+ *
+ */
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.conf.*
 import org.apache.hadoop.io.*
