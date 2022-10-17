@@ -46,22 +46,29 @@ ERROR,10
 Log files are accepted as input. The logs logs of type are only considered"ERROR" is grabbed alongmessage's timestamp is grabbed and compared to the fixed starttime and endtime obtained from the config. If the particular line satifies all conditions it is counted as 1 and passed to the reducer as (key,value) pair ie (INFO or DEBUG or ERROR or WARN,1). The reducer groups together all pairs of same key type and sums them and final output is (messagetype, sum)
 
 For example: 
+13:48-13:49,50
+13:47-13:48,32
+
+#### Task 3
+
+Accepts input from log files. The log message type is mapped to one in the mapper phase. This is aggregated in the reduction step to get the total number of each type of log message.
+
+For example: 
 DEBUG,13
 ERROR,10
 
-Task 3
 
-Accepts input from log files. The log message type is mapped to number one in the mapper phase. This is aggregated in the reduction step to get the total number of each type of log message. Output: DEBUG,59093 \sINFO,413448 \sWARN,68786 \sERROR,49549
+#### Task 4
 
-Task 4
+Accepts input from log files and  matches the predetermined pattern in the mapper phase. For each type, the reducer determines the length of the longest string and outputs that information as the result.
 
-Accepts input from log files. The message string that matches the predetermined pattern is mapped to the message type in the mapper phase. For each type, the reducer determines the length of the longest string and outputs that information as the result.
-
-Output includes DEBUG,18 INFO,15 WARN,15, and ERROR,24.
+For example: 
+DEBUG,13
+ERROR,10
 
 Implementing AWS
 
-Use "sbt assembly" to create the jar file, and then use this as input for the AWS EMR step as seen in the movie. The inputs may be transferred into the cluster's master node or stored on S3. While the application is running, provide the appropriate input routes.
+To run on AWS store the input files and jar files in S3 Bucket. Open a cluster and the jar can be run using steps for Custom jar with the arguments as mentioned.
 
 
 
