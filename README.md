@@ -9,7 +9,7 @@ Instructions for installing the and implementing the Tasks.
 - Open corresponging shell for Mac/linux/windows (I used windows powershell) and navigate to the root directory.
 - In the root directory run command: "sbt assembly"
 - This generates a JAR file at target/scala-3.0.0/"jarfile"
-- To run the 4 tasks you can use the object names MapReduceProgram1,MapReduceProgram2,MapReduceProgram3,MapReduceProgram4
+- To run the 4 tasks you can use the object names main1,main2,main3,main4
 - For Task 1, it takes 2 parameters: input files path and output folder path
 - For Task 2, it takes 3 parameters: input files path, intermediate path and output folder path
 - For Task 3, it takes 2 parameters: input files path and output folder path
@@ -17,16 +17,16 @@ Instructions for installing the and implementing the Tasks.
 
 ### Running Tasks:
 
-For task1 : "hadoop jar "jarfilename".jar MapReduceProgram1 /input /output
+For task1 : "hadoop jar "jarfilename".jar main1 /input /output
 where /input is folder containing log files, /output is folder name where output is stored
 
-For task2 : "hadoop jar "jarfilename".jar MapReduceProgram2 /input /intermediateoutput /output
+For task2 : "hadoop jar "jarfilename".jar main2 /input /intermediateoutput /output
 where /input is folder containing log files, /output is folder name where output is stored
 
-For task3 : "hadoop jar "jarfilename".jar MapReduceProgram3 /input /output
+For task3 : "hadoop jar "jarfilename".jar main3 /input /output
 where /input is folder containing log files, /output is folder name where output is stored
 
-For task4 : "hadoop jar "jarfilename".jar MapReduceProgram4 /input /output
+For task4 : "hadoop jar "jarfilename".jar main4 /input /output
 where /input is folder containing log files, /output is folder name where output is stored
 
 Here is video explaining the code and running jar on AWS https://youtu.be/grw2Vo2m1Jo
