@@ -48,7 +48,7 @@ object runtask4:
         val msg_len = values.asScala.reduce((value1,value2) => maxstring(value1,value2))
         output.collect(new Text(key.toString), new IntWritable(msg_len.toString.length))
 
-  @main def main4(inputPath: String, outputPath: String) =
+  def main(inputPath: String, outputPath: String) =
     val conf: JobConf = new JobConf(this.getClass)
     conf.setJobName("Task4")
     conf.set("mapred.textoutputformat.separator", ",")
