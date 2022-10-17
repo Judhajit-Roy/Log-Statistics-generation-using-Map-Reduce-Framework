@@ -41,7 +41,7 @@ For example:
 DEBUG,13
 ERROR,10
 
-#### Task1
+#### Task2
 
 Log files are accepted as input. The logs logs of type are only considered"ERROR" is grabbed alongmessage's timestamp is grabbed and compared to the fixed starttime and endtime obtained from the config. If the particular line satifies all conditions it is counted as 1 and passed to the reducer as (key,value) pair ie (INFO or DEBUG or ERROR or WARN,1). The reducer groups together all pairs of same key type and sums them and final output is (messagetype, sum)
 
