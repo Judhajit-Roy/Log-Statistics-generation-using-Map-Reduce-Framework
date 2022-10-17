@@ -66,7 +66,7 @@ For example:
 DEBUG,13
 ERROR,10
 
-Implementing AWS
+### Implementing AWS
 
 To run on AWS store the input files and jar files in S3 Bucket. Open a cluster and the jar can be run using steps for Custom jar with the arguments as mentioned.
 
