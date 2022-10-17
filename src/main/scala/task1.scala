@@ -1,6 +1,7 @@
 class task1 {
 
 }
+# Task to read inputs and count instances for interval
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.conf.*
 import org.apache.hadoop.io.*
