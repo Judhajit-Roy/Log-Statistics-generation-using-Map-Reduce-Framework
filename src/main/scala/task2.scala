@@ -2,6 +2,11 @@
 class task2 {
 
 }
+/**
+ * This map reduce job takes in log files in a folder as input and outputs the number of error messages
+ * divided across time intervals of n seconds where n is passed as a parameter while
+ * running the program. The output is sorted in descending order of number of messages.
+ **/
 import HelperFunc.{CreateLogger}
 import com.typesafe.config.ConfigFactory
 import org.apache.hadoop.fs.Path
