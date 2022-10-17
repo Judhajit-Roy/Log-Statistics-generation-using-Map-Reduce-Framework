@@ -1,6 +1,10 @@
 class task3 {
 
 }
+/**
+ * This task involves counting the number of messages belonging to each message type.
+ */
+
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.conf.*
 import org.apache.hadoop.io.*
