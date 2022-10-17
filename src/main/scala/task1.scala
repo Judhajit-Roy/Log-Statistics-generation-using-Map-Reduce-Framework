@@ -48,7 +48,7 @@ object runtask1:
       val sum = values.asScala.reduce((valueOne, valueTwo) => new IntWritable(valueOne.get() + valueTwo.get()))
       output.collect(key,  new IntWritable(sum.get()))
   
-  @main def main1(inputPath: String, outputPath: String) =
+  def main(inputPath: String, outputPath: String) =
     val conf: JobConf = new JobConf(this.getClass)
     conf.set("mapred.textoutputformat.separator", ",")
     conf.setJobName("Task1")
