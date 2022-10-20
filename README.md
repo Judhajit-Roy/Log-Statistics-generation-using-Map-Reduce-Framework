@@ -38,33 +38,38 @@ Here is video explaining the code and running jar on AWS https://youtu.be/grw2Vo
 Log files are accepted as input. The log message type of logs that fit the established pattern are mapped during the mapper phase. The message's timestamp is grabbed and compared to the fixed starttime and endtime obtained from the config. If the particular line satifies all conditions it is counted as 1 and passed to the reducer as (key,value) pair ie (INFO or DEBUG or ERROR or WARN,1). The reducer groups together all pairs of same key type and sums them and final output is (messagetype, sum)
 
 For example: 
+```
 DEBUG,13
 ERROR,10
-
+```
 #### Task2
 
 Log files are accepted as input. The logs logs of type are only considered"ERROR" is grabbed alongmessage's timestamp is grabbed and compared to the fixed starttime and endtime obtained from the config. If the particular line satifies all conditions it is counted as 1 and passed to the reducer as (key,value) pair ie (INFO or DEBUG or ERROR or WARN,1). The reducer groups together all pairs of same key type and sums them and final output is (messagetype, sum)
 
 For example: 
+```
 13:48-13:49,50
 13:47-13:48,32
-
+```
 #### Task 3
 
 Accepts input from log files. The log message type is mapped to one in the mapper phase. This is aggregated in the reduction step to get the total number of each type of log message.
 
 For example: 
+```
 DEBUG,13
 ERROR,10
-
+```
 
 #### Task 4
 
 Accepts input from log files and  matches the predetermined pattern in the mapper phase. For each type, the reducer determines the length of the longest string and outputs that information as the result.
 
 For example: 
+```
 DEBUG,13
 ERROR,10
+```
 
 ### Implementing AWS
 
