@@ -3,9 +3,8 @@ class task2 {
 
 }
 /**
- * This map reduce job takes in log files in a folder as input and outputs the number of error messages
- * divided across time intervals of n seconds where n is passed as a parameter while
- * running the program. The output is sorted in descending order of number of messages.
+ * This map reduce job takes in log files from input folder and outputs the number of error messages
+ * divided across predefined time interval of n seconds. The output is sorted in descending order of number of messages matched.
  **/
 import HelperFunc.{CreateLogger}
 import com.typesafe.config.ConfigFactory
