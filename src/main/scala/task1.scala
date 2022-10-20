@@ -2,9 +2,8 @@ class task1 {
 
 }
 /**
- * This map reduce job takes in log files in a folder as input and outputs the number of messages of each log type
- * (INFO, DEBUG, WARN, ERROR) divided across time intervals of n seconds where n is passed as a parameter while
- * running the program.
+ * This map reduce job takes in log files from input folder and outputs the number of messages of each log type
+ * (INFO, DEBUG, WARN, ERROR) between a predefined time interval stored in config
  *
  */
 import org.apache.hadoop.fs.Path
